@@ -11,54 +11,32 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* Ph.D. in Electrical Engineering, 2026.03 - present
+* M.S. in Electrical Engineering, 2024.03 - 2026.02
+* B.S. in Electrical Engineering, 2019.09 - 2024.02
 
-Work experience
+Research interests
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
-
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Computational imaging
+* Adaptive optics
+* Optical system modeling
+* Bio-optical imaging
 
 Publications
 ======
-  <ul>{% for post in site.publications reversed %}
+  <ul>{% assign cv_publications = site.publications | where_exp: "post", "post.published != false" | sort: "date" | reverse %}
+  {% for post in cv_publications %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
-Talks
+
+Teaching experience
 ======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
+* Teaching experience and mentoring activities will be added here.
+
+Research and other experience
 ======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
+* Research collaboration with [Prof. Jung-Hoon Park's group @ UNIST](https://www.biooptics.org/) and [Prof. Jae-Byum Chang's group @ KAIST](https://sites.google.com/site/jbchang03/) on graph-based optical system modeling and adaptive optics.
+
+Honors and awards
 ======
-* Currently signed in to 43 different slack teams
+* Best Poster Award, SPIE Advanced Biophotonics Conference (ABC), 2025.

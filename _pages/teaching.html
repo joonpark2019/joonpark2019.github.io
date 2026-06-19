@@ -7,6 +7,11 @@ author_profile: true
 
 {% include base_path %}
 
-{% for post in site.teaching reversed %}
+{% assign teaching_posts = site.teaching | where_exp: "post", "post.published != false" | sort: "date" | reverse %}
+{% if teaching_posts.size > 0 %}
+{% for post in teaching_posts %}
   {% include archive-single.html %}
 {% endfor %}
+{% else %}
+<p>Teaching experience and mentoring activities will be added here.</p>
+{% endif %}
